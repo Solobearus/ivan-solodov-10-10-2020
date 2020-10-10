@@ -50,7 +50,7 @@ export default {
     default: `1px solid ${colors1.primary.default}`,
   },
   borderRadius: {
-    default: `5px`,
+    default: `10px`,
   },
   shadow: {
     default: "0px 4px 40px rgba(25, 25, 25, 0.1)",

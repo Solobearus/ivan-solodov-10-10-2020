@@ -15,7 +15,7 @@ import { itemsSlice } from "../../store/slices";
 
 const useStyles = makeStyles(MuiStyleFunction);
 
-const ItemRow = ({ item }) => {
+const ItemRow = ({ item, recieved }) => {
   const classes = useStyles();
   const dispatch = useDispatch();
 
@@ -34,9 +34,11 @@ const ItemRow = ({ item }) => {
       <div className={classes.itemCard__price}>{item.price}</div>
       <div className={classes.itemCard__date}>{getDate(item.date)}</div>
       <div className={classes.itemCard__store}>{item.store}</div>
-      <Button onClick={onClick} className={classes.itemRow__button}>
-        Recieved
-      </Button>
+      {!recieved && (
+        <Button onClick={onClick} className={classes.itemRow__button}>
+          Recieved
+        </Button>
+      )}
     </div>
   );
 };
