@@ -11,6 +11,7 @@ import {} from "./BoughtPage.logic";
 import { makeStyles } from "@material-ui/core";
 import { AppBar, Tabs, Tab, Typography, Box } from "@material-ui/core";
 import ItemsList from "../../tabs/ItemsList/ItemsList";
+import StoresList from '../../tabs/StoresList/StoresList.jsx'
 
 const useStyles = makeStyles(MuiStyleFunction);
 
@@ -31,12 +32,12 @@ const BoughtPage = ({}) => {
           onChange={handleChange}
           aria-label="simple tabs example"
         >
-          <Tab label="Item One" />
-          <Tab label="Item Two" />
+          <Tab label="Items List" />
+          <Tab label="Stores List" />
         </Tabs>
       </AppBar>
-      {tabIndex === 0 && <ItemsList>Items List</ItemsList>}
-      {tabIndex === 1 && <div>Item Two</div>}
+      {tabIndex === 0 && <ItemsList></ItemsList>}
+      {tabIndex === 1 && <StoresList>Item Two</StoresList>}
     </div>
   );
 };

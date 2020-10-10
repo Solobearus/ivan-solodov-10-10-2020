@@ -1,4 +1,7 @@
 
 export default (theme) => ({
-  listPage: {}
+  App: {
+    fontFamily: theme.typography.fontFamily,
+    fontSize: theme.fontSizes.default
+  }
 })

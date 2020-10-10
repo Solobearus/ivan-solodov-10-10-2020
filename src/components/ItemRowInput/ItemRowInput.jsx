@@ -63,7 +63,7 @@ const ItemRowInput = ({}) => {
       >
         {stores}
       </Select>
-      <Button onClick={handleSubmit}>Submit</Button>
+      <Button onClick={handleSubmit} className={classes.ItemRowInput__button}>Submit</Button>
       {/* <Button onClick={}>Clear</Button> */}
     </div>
   );

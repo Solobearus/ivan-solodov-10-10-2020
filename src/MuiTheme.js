@@ -32,7 +32,7 @@ export default {
   fontSizes: {
     h1: `36px`,
     h2: `28px`,
-    default: `16px`,
+    default: `14px`,
     small: `12px`,
   },
   typography: {

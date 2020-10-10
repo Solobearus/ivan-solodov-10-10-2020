@@ -44,7 +44,7 @@ export const itemsSlice = createSlice({
     addItem: (state, action) => {
       const newState = {
         ...state,
-        items: { ...state.items, [state.currentUniqueId]: action.payload },
+        items: { ...state.items, [state.currentUniqueId]: { ...action.payload, id: state.currentUniqueId } },
         currentUniqueId: state.currentUniqueId + 1,
       };
       localStorage.setItem("state", JSON.stringify(newState));
@@ -54,12 +54,14 @@ export const itemsSlice = createSlice({
     recieveItem: (state, action) => {
 
       const newItems = { ...state.items };
-      delete newItems[action.id];
+      delete newItems[action.payload.id];
+
+      console.log(`test`)
 
       const newState = {
         ...state,
         items: { ...newItems },
-        recievedItems: { ...state.recievedItems, [action.id]: action.payload },
+        recievedItems: { ...state.recievedItems, [action.payload.id]: state.items[action.payload.id] },
       };
       localStorage.setItem("state", JSON.stringify(newState));
 

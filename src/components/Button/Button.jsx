@@ -13,7 +13,13 @@ import MUIButton from "@material-ui/core/Button";
 
 const useStyles = makeStyles(MuiStyleFunction);
 
-const Button = ({ variant, className, children, onClick = () => {} }) => {
+const Button = ({
+  variant,
+  className,
+  children,
+  onClick = () => {},
+  disabled = false,
+}) => {
   const classes = useStyles();
 
   return (
@@ -21,6 +27,7 @@ const Button = ({ variant, className, children, onClick = () => {} }) => {
       className={`${classes.button} ${className}`}
       variant={variant}
       onClick={onClick}
+      disabled={disabled}
     >
       {children}
     </MUIButton>

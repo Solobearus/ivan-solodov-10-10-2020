@@ -9,5 +9,8 @@ export default (theme) => ({
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
+    },
+    ItemRowInput__button: {
+        margin: `0 0 0 ${theme.margin.default}`,
     }
 })

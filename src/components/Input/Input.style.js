@@ -1,6 +1,6 @@
 
 export default (theme) => ({
     input: {
-        margin: theme.margin.default
+        margin: `0 ${theme.margin.default}`
     }
 })

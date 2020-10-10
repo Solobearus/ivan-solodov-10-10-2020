@@ -7,5 +7,9 @@ export default (theme) => ({
         borderRadius: theme.borderRadius.default,
         display: 'flex',
         justifyContent: 'space-between',
-    }
+        alignItems: 'center',
+    },
+    itemRow__button: {
+        margin: 0,
+    },
 })
