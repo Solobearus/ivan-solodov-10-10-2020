@@ -1,28 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 import Header from './components/Header/Header.jsx'
-import ListPage from './pages/ListPage/ListPage.jsx'
+import BoughtPage from './pages/BoughtPage/BoughtPage.jsx'
 import RecievedPage from './pages/RecievedPage/RecievedPage.jsx'
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Redirect,
+  Link,
   useHistory
 } from "react-router-dom";
+import MuiStyleFunction from './App.style'
+import { makeStyles } from '@material-ui/core'
 
-
+const useStyles = makeStyles(MuiStyleFunction);
 
 function App() {
+  const classes = useStyles();
+
   return (
-    <div className="App">
-      test
+    <div className={classes.App}>
       <Router>
         <Header />
         <Switch>
-          <Route path="/list">
-            <ListPage />
+          <Route path="/bought">
+            <BoughtPage />
           </Route>
           <Route path="/received">
             <RecievedPage />
