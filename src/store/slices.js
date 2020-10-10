@@ -15,12 +15,19 @@ export const currencySlice = createSlice({
   },
 });
 
+
+
 export const itemsSlice = createSlice({
   name: "items",
   initialState: {
     currentUniqueId: 0,
     items: {},
     recievedItems: {},
+    stores: [
+      'Amazon',
+      'Ebay',
+      'Aliexpress',
+    ],
   },
   reducers: {
     addItem: (state, action) => {

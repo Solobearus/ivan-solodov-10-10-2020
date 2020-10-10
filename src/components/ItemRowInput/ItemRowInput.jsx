@@ -11,18 +11,27 @@ import {} from "./ItemRowInput.logic";
 import { makeStyles } from "@material-ui/core";
 import Input from "../Input/Input.jsx";
 import Button from "../Button/Button.jsx";
-import { handleSubmit } from "./ItemRowInput.logic";
+import { useItemRowInput } from "./ItemRowInput.logic";
+import { handleSubmit, clear } from "./ItemRowInput.logic";
 import Select from "../Select/Select.jsx";
-
+import DatePicker from "../DatePicker/DatePicker.jsx";
 const useStyles = makeStyles(MuiStyleFunction);
 
 const ItemRowInput = ({}) => {
   const classes = useStyles();
 
-  const [name, setName] = useState("");
-  const [price, setPrice] = useState(0);
-  const [date, setDate] = useState("");
-  const [store, setStore] = useState(null);
+  const {
+    name,
+    setName,
+    price,
+    setPrice,
+    date,
+    setDate,
+    store,
+    stores,
+    setStore,
+    handleSubmit,
+  } = useItemRowInput();
 
   return (
     <div className={classes.ItemRowInput}>
@@ -34,25 +43,27 @@ const ItemRowInput = ({}) => {
       ></Input>
       <Input
         label={"price"}
+        type="number"
+        adornment="$"
         className={classes.ItemRowInput__price}
         onChange={(e) => setPrice(e.target.value)}
         value={price}
       ></Input>
-      <Input
+      <DatePicker
         label={"date"}
         className={classes.ItemRowInput__date}
         onChange={(e) => setDate(e.target.value)}
         value={date}
-      ></Input>
+      ></DatePicker>
       <Select
         label={"store"}
         className={classes.ItemRowInput__store}
         onChange={(e) => setStore(e.target.value)}
         value={store}
-      ></Select>
-      <Button onClick={() => handleSubmit(name, price, date, store)}>
-        Submit
-      </Button>
+      >
+        {stores}
+      </Select>
+      <Button onClick={handleSubmit}>Submit</Button>
       {/* <Button onClick={}>Clear</Button> */}
     </div>
   );
