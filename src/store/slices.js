@@ -15,7 +15,17 @@ export const currencySlice = createSlice({
   },
 });
 
-
+export const snackSlice = createSlice({
+  name: "snack",
+  initialState: {
+    open: false,
+    message: '',
+  },
+  reducers: {
+    closeSnack: (state, action) => ({ open: false }),
+    openSnack: (state, action) => ({ open: true, message: action.payload.message, })
+  }
+})
 
 export const itemsSlice = createSlice({
   name: "items",
@@ -30,13 +40,14 @@ export const itemsSlice = createSlice({
     ],
   },
   reducers: {
+    initState: (state, action) => action.payload.state,
     addItem: (state, action) => {
       const newState = {
         ...state,
         items: { ...state.items, [state.currentUniqueId]: action.payload },
         currentUniqueId: state.currentUniqueId + 1,
       };
-      localStorage.setItem("state", JSON.stringify(state));
+      localStorage.setItem("state", JSON.stringify(newState));
 
       return newState;
     },
@@ -50,7 +61,7 @@ export const itemsSlice = createSlice({
         items: { ...newItems },
         recievedItems: { ...state.recievedItems, [action.id]: action.payload },
       };
-      localStorage.setItem("state", JSON.stringify(state));
+      localStorage.setItem("state", JSON.stringify(newState));
 
       return newState;
     },

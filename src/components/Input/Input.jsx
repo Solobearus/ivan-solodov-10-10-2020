@@ -17,6 +17,7 @@ const Input = ({
   label = "",
   onChange = () => {},
   type = "text",
+  value,
 }) => {
   const classes = useStyles();
 
@@ -26,11 +27,12 @@ const Input = ({
       className={classes.input}
       onChange={onChange}
       type={type}
+      value={value}
       InputProps={
         adornment
           ? {
               startAdornment: (
-                <InputAdornment position="start">Kg</InputAdornment>
+                <InputAdornment position="start">{adornment}</InputAdornment>
               ),
             }
           : undefined

@@ -43,6 +43,9 @@ export default {
     large: `20px`,
     default: `10px`,
   },
+  border: {
+    default: `1px solid #6610f2`,
+  },
   borderRadius: {
     default: `5px`,
   },

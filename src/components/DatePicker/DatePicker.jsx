@@ -13,14 +13,14 @@ import { KeyboardDatePicker } from "@material-ui/pickers";
 
 const useStyles = makeStyles(MuiStyleFunction);
 
-const DatePicker = (
-  { onChange = () => {} },
+const DatePicker = ({
+  onChange = () => {},
   value,
   label,
   format = "dd/MM/yyyy",
   id,
-  className
-) => {
+  className,
+}) => {
   const classes = useStyles();
 
   return (

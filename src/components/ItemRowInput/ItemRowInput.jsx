@@ -52,7 +52,7 @@ const ItemRowInput = ({}) => {
       <DatePicker
         label={"date"}
         className={classes.ItemRowInput__date}
-        onChange={(e) => setDate(e.target.value)}
+        onChange={(value) => setDate(value)}
         value={date}
       ></DatePicker>
       <Select

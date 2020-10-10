@@ -9,11 +9,19 @@ import React, {
 import MuiStyleFunction from "./ItemRow.style";
 import {} from "./ItemRow.logic";
 import { makeStyles } from "@material-ui/core";
+import DateFnsAdapter from "@date-io/date-fns";
 
 const useStyles = makeStyles(MuiStyleFunction);
 
 const ItemRow = ({ item }) => {
   const classes = useStyles();
+
+  console.log(`item`, item);
+  const dateFns = new DateFnsAdapter();
+
+  // const getDateString = (date) => {
+  //   return `${date.getDate()}/${date.getMonth()}/${date.getYear()}`;
+  // };
 
   return (
     <div className={classes.itemRow}>

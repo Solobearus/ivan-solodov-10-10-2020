@@ -1,4 +1,11 @@
 
 export default (theme) => ({
-    itemCard: {}
+    itemRow: {
+        padding: theme.padding.default,
+        margin: `${theme.margin.default} 0 `,
+        border: theme.border.default,
+        borderRadius: theme.borderRadius.default,
+        display: 'flex',
+        justifyContent: 'space-between',
+    }
 })
