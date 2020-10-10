@@ -1,4 +1,6 @@
 
 export default (theme) => ({
-    DatePicker: {}
+    DatePicker: {
+        margin: theme.margin.default
+    }
 })

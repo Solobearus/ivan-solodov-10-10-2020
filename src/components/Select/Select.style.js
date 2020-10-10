@@ -1,4 +1,6 @@
 
 export default (theme) => ({
-    Select: {}
+    Select: {
+        minWidth: '150px',
+    }
 })
