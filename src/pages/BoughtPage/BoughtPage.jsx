@@ -10,30 +10,24 @@ import MuiStyleFunction from "./BoughtPage.style";
 import {} from "./BoughtPage.logic";
 import { makeStyles } from "@material-ui/core";
 import { AppBar, Tabs, Tab, Typography, Box } from "@material-ui/core";
+import ItemsList from "../../tabs/ItemsList/ItemsList";
 
 const useStyles = makeStyles(MuiStyleFunction);
 
 const BoughtPage = ({}) => {
   const classes = useStyles();
 
-  const [value, setValue] = React.useState(0);
+  const [tabIndex, setTabIndex] = React.useState(0);
 
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
+  const handleChange = (event, index) => {
+    setTabIndex(index);
   };
-
-  function a11yProps(index) {
-    return {
-      id: `simple-tab-${index}`,
-      "aria-controls": `simple-tabpanel-${index}`,
-    };
-  }
 
   return (
     <div className={classes.BoughtPage}>
       <AppBar position="static">
         <Tabs
-          value={value}
+          value={tabIndex}
           onChange={handleChange}
           aria-label="simple tabs example"
         >
@@ -41,8 +35,8 @@ const BoughtPage = ({}) => {
           <Tab label="Item Two" />
         </Tabs>
       </AppBar>
-      {value === 0 && <div>Item One</div>}
-      {value === 1 && <div>Item Two</div>}
+      {tabIndex === 0 && <ItemsList>Items List</ItemsList>}
+      {tabIndex === 1 && <div>Item Two</div>}
     </div>
   );
 };
