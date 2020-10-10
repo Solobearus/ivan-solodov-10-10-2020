@@ -1,21 +1,13 @@
 import { configureStore } from "@reduxjs/toolkit";
 import {
-  userDetailsSlice,
-  languagesSlice,
-  userAuthSlice,
-  productsSlice,
-  searchSlice,
-  // categoriesSlice,
+  currencySlice,
+  itemsSlice
 } from "./slices";
 
 const store = configureStore({
   reducer: {
-    userDetails: userDetailsSlice.reducer,
-    language: languagesSlice.reducer,
-    userAuth: userAuthSlice.reducer,
-    products: productsSlice.reducer,
-    search: searchSlice.reducer,
-    // categories: categoriesSlice.reducer,
+    currency: currencySlice.reducer,
+    items: itemsSlice.reducer,
   },
 });
 

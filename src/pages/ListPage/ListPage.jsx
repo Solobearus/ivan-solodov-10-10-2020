@@ -15,7 +15,7 @@ const useStyles = makeStyles(MuiStyleFunction);
 const ListPage = ({}) => {
   const classes = useStyles();
 
-  return <div className={classes.}></div>;
+  return <div className={classes.ListPage}>Im in ListPage</div>;
 };
 
 export default ListPage;

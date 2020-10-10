@@ -8,14 +8,14 @@ import React, {
 } from "react";
 import MuiStyleFunction from "./RecievedPage.style";
 import {} from "./RecievedPage.logic";
-import {makeStyles} from '@material-ui/core'
+import { makeStyles } from "@material-ui/core";
 
 const useStyles = makeStyles(MuiStyleFunction);
 
 const RecievedPage = ({}) => {
   const classes = useStyles();
 
-  return <div className={classes.}></div>;
+  return <div className={classes.RecievedPage}>Im in ListPage</div>;
 };
 
 export default RecievedPage;

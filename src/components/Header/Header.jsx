@@ -15,7 +15,7 @@ const useStyles = makeStyles(MuiStyleFunction);
 const Header = ({}) => {
   const classes = useStyles();
 
-  return <div className={classes.}></div>;
+  return <div className={classes.Header}>Im Header</div>;
 };
 
 export default Header;
