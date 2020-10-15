@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import Header from './components/Header/Header.jsx'
 import {
   BrowserRouter as Router,
   Switch,
@@ -10,7 +9,7 @@ import {
 } from "react-router-dom";
 import MuiStyleFunction from './App.style'
 import { makeStyles } from '@material-ui/core'
-import SnackBar from './components/SnackBar/SnackBar.jsx'
+
 import { useDispatch, useSelector } from "react-redux";
 import { itemsSlice } from './store/slices'
 import Page from './pages/Page/Page.jsx'
@@ -33,9 +32,22 @@ function App() {
     <div className={classes.App}>
       <Router>
         <Switch>
-          <Header />
-          <SnackBar></SnackBar>
-          <Page></Page>
+          <Route exact path={"/"}>
+            <Redirect
+              to={{
+                pathname: "/list"
+              }}
+            />
+          </Route>
+          <Route path={"/list"}>
+            <Page />
+          </Route>
+          <Route path={"/received"}>
+            <Page />
+          </Route>
+          <Route path="*">
+            404
+          </Route>
         </Switch>
       </Router>
     </div>

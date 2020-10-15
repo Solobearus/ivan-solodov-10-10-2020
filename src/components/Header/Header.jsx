@@ -19,12 +19,12 @@ const Header = ({}) => {
 
   return (
     <div className={classes.Header}>
-      <Button variant="contained">
-        <Link to="/list">list</Link>
-      </Button>
-      <Button variant="contained">
-        <Link to="/received">received</Link>
-      </Button>
+      <Link to="/list">
+        <Button variant="contained">list</Button>
+      </Link>
+      <Link to="/received">
+        <Button variant="contained">received</Button>
+      </Link>
     </div>
   );
 };

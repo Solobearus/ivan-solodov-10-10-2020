@@ -12,6 +12,8 @@ import { makeStyles } from "@material-ui/core";
 import { AppBar, Tabs, Tab, Typography, Box } from "@material-ui/core";
 import ItemsList from "../../tabs/ItemsList/ItemsList";
 import StoresList from "../../tabs/StoresList/StoresList.jsx";
+import Header from '../../components/Header/Header.jsx'
+import SnackBar from '../../components/SnackBar/SnackBar.jsx'
 
 const useStyles = makeStyles(MuiStyleFunction);
 
@@ -26,18 +28,20 @@ const Page = ({}) => {
 
   return (
     <div className={classes.BoughtPage}>
-        <AppBar position="static">
-          <Tabs
-            value={tabIndex}
-            onChange={handleChange}
-            aria-label="simple tabs example"
-          >
-            <Tab label="Items List" />
-            <Tab label="Stores List" />
-          </Tabs>
-        </AppBar>
-        {tabIndex === 0 && <ItemsList></ItemsList>}
-        {tabIndex === 1 && <StoresList></StoresList>}
+      <Header />
+      <SnackBar />
+      <AppBar position="static">
+        <Tabs
+          value={tabIndex}
+          onChange={handleChange}
+          aria-label="simple tabs example"
+        >
+          <Tab label="Items List" />
+          <Tab label="Stores List" />
+        </Tabs>
+      </AppBar>
+      {tabIndex === 0 && <ItemsList></ItemsList>}
+      {tabIndex === 1 && <StoresList></StoresList>}
     </div>
   );
 };
