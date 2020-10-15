@@ -1,20 +1,7 @@
-import { useSelector, useDispatch } from "react-redux";
-import { useHistory } from "react-router-dom";
 
 
-export const useGetTheRightData = () => {
+import { itemsSlice } from '../../store/slices'
 
-    let history = useHistory();
-
-    const isItemsTab = history.location.pathname === "/list"
-
-    // TODO: improve
-    const sliceToTakeData =
-        isItemsTab ? "items" : "recievedItems";
-
-    const { [sliceToTakeData]: dataFromSlice } = useSelector(
-        (state) => state.items
-    );
-
-    return { isItemsTab, dataFromSlice };
-}
+export const onClick = (dispatch, item) => {
+    dispatch(itemsSlice.actions.recieveItem({ id: item.id }));
+};
