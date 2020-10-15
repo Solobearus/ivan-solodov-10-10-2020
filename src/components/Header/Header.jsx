@@ -20,7 +20,7 @@ const Header = ({}) => {
   return (
     <div className={classes.Header}>
       <Button variant="contained">
-        <Link to="/bought">bought</Link>
+        <Link to="/list">list</Link>
       </Button>
       <Button variant="contained">
         <Link to="/received">received</Link>
