@@ -1,17 +1,17 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+
+const INTERVAL_FOR_CURRENCY_UPDATE = 1000;
+
 export const currencySlice = createSlice({
   name: "currency",
   initialState: {
-    USDtoILS: 0,
+    USDtoILS: 3.5,
+    intervalForCurrencyUpdate: INTERVAL_FOR_CURRENCY_UPDATE,
   },
   reducers: {
-    fetchCurrency: async (state, action) => {
-      try {
-        const result = await fetch('https://api.exchangeratesapi.io/latest?base=USD&symbols=USD,NIS');
-        return { USDtoILS: result }
-      } catch (e) { console.error(e) };
-    },
+    setUSDtoILS: (state, action) => ({ ...state, USDtoILS: action.payload }),
+    setIntervalForCurrencyUpdate: (state, action) => ({ ...state, intervalForCurrencyUpdate: action.payload })
   },
 });
 
