@@ -1,6 +1,6 @@
 
 export default (theme) => ({
-    button: {
+    ItemsListHeader__spaceForButton: {
         minWidth: theme.sizes.buttonMinWidth,
     }
 })

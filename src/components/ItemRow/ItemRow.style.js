@@ -8,6 +8,10 @@ export default (theme) => ({
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
+
+        [theme.breakpoints.down('xs')]: {
+            flexDirection: 'column',
+        },
     },
 
 })

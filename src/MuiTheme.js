@@ -58,6 +58,16 @@ export default {
     },
   },
 
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 960,
+      lg: 1280,
+      xl: 1920,
+    },
+  },
+
   // use this one
   colors: {
     default: colors1
@@ -88,4 +98,7 @@ export default {
   shadow: {
     default: "0px 4px 40px rgba(25, 25, 25, 0.1)",
   },
+  sizes: {
+    buttonMinWidth: '90px',
+  }
 };

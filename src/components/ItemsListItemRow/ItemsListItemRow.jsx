@@ -14,18 +14,28 @@ const ItemsListItemRow = ({ item, onClick, isShowRecievedButton }) => {
 
   return (
     <>
-      <div className={classes.ItemsListRowItem__name}>{item.name}</div>
-      <div className={classes.ItemsListRowItem__price}>
+      <div
+        className={`${classes.ItemsListRowItem__name} ${classes.ItemsListRowItem__data}`}
+      >
+        {item.name}
+      </div>
+      <div
+        className={`${classes.ItemsListRowItem__price} ${classes.ItemsListRowItem__data}`}
+      >
         <div>{`שח`}</div>
         <div>{`${(item.price * USDtoILS).toFixed(2)}`}</div>
       </div>
-      <div className={classes.ItemsListRowItem__date}>{getDate(item.date)}</div>
-      <div className={classes.ItemsListRowItem__store}>{item.store}</div>
-      {isShowRecievedButton && (
-        <Button onClick={onClick}>
-          Recieved
-        </Button>
-      )}
+      <div
+        className={`${classes.ItemsListRowItem__date} ${classes.ItemsListRowItem__data}`}
+      >
+        {getDate(item.date)}
+      </div>
+      <div
+        className={`${classes.ItemsListRowItem__store} ${classes.ItemsListRowItem__data}`}
+      >
+        {item.store}
+      </div>
+      {isShowRecievedButton && <Button onClick={onClick}>Recieved</Button>}
     </>
   );
 };

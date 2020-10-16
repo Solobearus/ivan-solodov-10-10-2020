@@ -7,7 +7,7 @@ import ItemRowInput from "../../components/ItemRowInput/ItemRowInput.jsx";
 import { useGetDataByURL } from "../../hooks/useGetDataByURL";
 import ItemsListItemRow from "../../components/ItemsListItemRow/ItemsListItemRow.jsx";
 import { useDispatch } from "react-redux";
-
+import ItemsListHeader from "../../components/ItemsListHeader/ItemsListHeader.jsx";
 const useStyles = makeStyles(MuiStyleFunction);
 
 const ItemsList = () => {
@@ -18,7 +18,10 @@ const ItemsList = () => {
 
   return (
     <div className={classes.itemsList}>
-      <h1>Items List</h1>
+      <h1>{!isItemsTab ? "Recieved " : ""}Items List</h1>
+      <ItemRow>
+        <ItemsListHeader isShowRecievedButton={isItemsTab} />
+      </ItemRow>
       {dataFromSlice &&
         Object.keys(dataFromSlice).map((key) => (
           <ItemRow key={key}>

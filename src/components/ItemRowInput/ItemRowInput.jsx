@@ -6,6 +6,8 @@ import Button from "../Button/Button.jsx";
 import { useItemRowInput } from "./ItemRowInput.logic";
 import Select from "../Select/Select.jsx";
 import DatePicker from "../DatePicker/DatePicker.jsx";
+import ItemRow from '../ItemRow/ItemRow.jsx'
+
 const useStyles = makeStyles(MuiStyleFunction);
 
 const ItemRowInput = () => {
@@ -27,7 +29,7 @@ const ItemRowInput = () => {
   return (
     <>
       <h2>Add an item:</h2>
-      <div className={classes.ItemRowInput}>
+      <ItemRow className={classes.ItemRowInput}>
         <Input
           label={"name"}
           className={`${classes.ItemRowInput__name} ${classes.ItemRowInput__Input}`}
@@ -56,8 +58,10 @@ const ItemRowInput = () => {
         >
           {stores}
         </Select>
-        <Button variant="contained" onClick={handleSubmit}>Submit</Button>
-      </div>
+        <Button variant="contained" onClick={handleSubmit}>
+          Submit
+        </Button>
+      </ItemRow>
     </>
   );
 };

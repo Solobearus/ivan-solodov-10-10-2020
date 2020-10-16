@@ -6,6 +6,7 @@ import ItemsList from "../../tabs/ItemsList/ItemsList";
 import StoresList from "../../tabs/StoresList/StoresList.jsx";
 import Header from "../../components/Header/Header.jsx";
 import SnackBar from "../../components/SnackBar/SnackBar.jsx";
+import CurrencyIntervalInput from "../../components/CurrencyIntervalInput/CurrencyIntervalInput.jsx";
 
 const useStyles = makeStyles(MuiStyleFunction);
 
