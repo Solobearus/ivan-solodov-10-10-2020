@@ -1,11 +1,4 @@
-import React, {
-  useState,
-  useEffect,
-  useContext,
-  useCallback,
-  useMemo,
-  useRef,
-} from "react";
+import React from "react";
 import MuiStyleFunction from "./Input.style";
 import {} from "./Input.logic";
 import { makeStyles, TextField, InputAdornment } from "@material-ui/core";
@@ -18,13 +11,14 @@ const Input = ({
   onChange = () => {},
   type = "text",
   value,
+  className
 }) => {
   const classes = useStyles();
 
   return (
     <TextField
       label={label}
-      className={classes.input}
+      className={`${classes.input} ${className ? className : ''}`}
       onChange={onChange}
       type={type}
       value={value}

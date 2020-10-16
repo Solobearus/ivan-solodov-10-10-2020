@@ -1,42 +1,35 @@
-import React, {
-  useState,
-  useEffect,
-  useContext,
-  useCallback,
-  useMemo,
-  useRef,
-} from "react";
+import React from "react";
 import MuiStyleFunction from "./Select.style";
-import {} from "./Select.logic";
 import { makeStyles } from "@material-ui/core";
 import {
   InputLabel,
   Select as MuiSelect,
-  FormHelperText,
   FormControl,
   MenuItem,
 } from "@material-ui/core";
 
 const useStyles = makeStyles(MuiStyleFunction);
 
-const Select = ({ label, onChange = () => {}, children = [], value }) => {
+const Select = ({
+  label,
+  onChange = () => {},
+  children = [],
+  value,
+  className,
+}) => {
   const classes = useStyles();
 
   return (
-    <FormControl className={classes.Select}>
+    <FormControl className={`${classes.Select} ${className ? className : ""}`}>
       <InputLabel shrink htmlFor={label}>
         {label}
       </InputLabel>
-      <MuiSelect
-        value={value}
-        onChange={onChange}
-        labelId={label}
-        // onChange={(val) => console.log(val.target.value)}
-        id={label}
-      >
+      <MuiSelect value={value} onChange={onChange} labelId={label} id={label}>
         {children &&
           children.map((option) => (
-            <MenuItem value={option}>{option}</MenuItem>
+            <MenuItem key={option} value={option}>
+              {option}
+            </MenuItem>
           ))}
       </MuiSelect>
     </FormControl>

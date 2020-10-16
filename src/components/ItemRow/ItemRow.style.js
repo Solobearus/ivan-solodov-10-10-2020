@@ -9,7 +9,5 @@ export default (theme) => ({
         justifyContent: 'space-between',
         alignItems: 'center',
     },
-    itemRow__button: {
-        margin: 0,
-    },
+
 })

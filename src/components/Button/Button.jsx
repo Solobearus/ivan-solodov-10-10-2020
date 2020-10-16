@@ -1,11 +1,4 @@
-import React, {
-  useState,
-  useEffect,
-  useContext,
-  useCallback,
-  useMemo,
-  useRef,
-} from "react";
+import React from "react";
 import MuiStyleFunction from "./Button.style";
 import {} from "./Button.logic";
 import { makeStyles } from "@material-ui/core";
@@ -24,12 +17,13 @@ const Button = ({
 
   return (
     <MUIButton
-      className={`${classes.button} ${className}`}
+      className={`${classes.button} ${className ? className : ""}`}
       variant={variant}
       onClick={onClick}
       disabled={disabled}
+      color="primary"
     >
-      {children}
+      <div>{children}</div>
     </MUIButton>
   );
 };

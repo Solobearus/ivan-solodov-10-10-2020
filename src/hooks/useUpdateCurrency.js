@@ -1,8 +1,7 @@
 import { currencySlice } from "../store/slices";
-import React, { useEffect, useState, useRef } from 'react';
-import { useDispatch, useSelector } from "react-redux";
+import { useEffect, useRef } from 'react';
+import { useSelector } from "react-redux";
 import axios from 'axios'
-const INTERVAL_FOR_CURRENCY_UPDATE = 10000;
 
 const fetchCurrency = async (dispatch) => {
     try {
@@ -16,7 +15,7 @@ export default (dispatch) => {
     const currencyUpdateInterval = useRef();
     const { intervalForCurrencyUpdate } = useSelector((state) => state.currency);
 
-    useEffect(() => fetchCurrency(dispatch), []);
+    useEffect(() => { fetchCurrency(dispatch) }, [dispatch]);
 
     useEffect(() => {
         currencyUpdateInterval.current && clearInterval(currencyUpdateInterval.current);
@@ -24,6 +23,6 @@ export default (dispatch) => {
         currencyUpdateInterval.current = setInterval(() => fetchCurrency(dispatch), intervalForCurrencyUpdate);
 
         return () => clearInterval(currencyUpdateInterval.current);
-    }, [intervalForCurrencyUpdate])
+    }, [intervalForCurrencyUpdate,dispatch])
 
 }

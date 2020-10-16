@@ -9,6 +9,5 @@ export const parseData = (dataFromSlice) => {
         }
     })
 
-    console.log(`storesData`,storesData)
     return storesData;
 }

@@ -1,4 +1,6 @@
 
 export default (theme) => ({
-    header: {}
+    Header: {
+        padding: theme.padding.large
+    }
 })

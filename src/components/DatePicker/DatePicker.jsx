@@ -1,11 +1,4 @@
-import React, {
-  useState,
-  useEffect,
-  useContext,
-  useCallback,
-  useMemo,
-  useRef,
-} from "react";
+import React from "react";
 import MuiStyleFunction from "./DatePicker.style";
 import {} from "./DatePicker.logic";
 import { makeStyles } from "@material-ui/core";
@@ -25,7 +18,9 @@ const DatePicker = ({
 
   return (
     <KeyboardDatePicker
-      className={className ? className : classes.DatePicker}
+      className={`${classes.DatePicker} ${
+        className ? className : classes.DatePicker
+      }`}
       margin="normal"
       id={id}
       label={label}

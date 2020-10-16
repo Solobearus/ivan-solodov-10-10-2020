@@ -1,4 +1,6 @@
 
 export default (theme) => ({
-    itemsList: {}
+    itemsList: {
+        padding: theme.padding.large
+    }
 })

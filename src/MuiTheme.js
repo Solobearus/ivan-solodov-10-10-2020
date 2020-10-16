@@ -23,8 +23,41 @@ const colors1 = {
   },
 };
 
+const colors2 = {
+  /* base color */
+  base: {
+    default: `#eee`,
+    light: `#fff`,
+    dark: `#999`,
+  },
+  /* primary brand color */
+  primary: {
+    default: `#6610f2`,
+    light: `#8540f5`,
+    dark: `#510bc4`,
+  },
+  /* secondary brand color */
+  secondary: {
+    default: `#dc3545`,
+    light: `#e4606d`,
+    dark: `#bd2130`,
+  },
+  font: {
+    default: `#333`,
+    invert: `#eee`,
+  },
+};
 
 export default {
+  palette: {
+    primary: {
+      main: colors1.primary.default,
+    },
+    secondary: {
+      main: colors1.primary.default,
+    },
+  },
+
   // use this one
   colors: {
     default: colors1

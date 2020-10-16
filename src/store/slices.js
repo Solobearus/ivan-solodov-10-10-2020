@@ -56,8 +56,6 @@ export const itemsSlice = createSlice({
       const newItems = { ...state.items };
       delete newItems[action.payload.id];
 
-      console.log(`test`)
-
       const newState = {
         ...state,
         items: { ...newItems },

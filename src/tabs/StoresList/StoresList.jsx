@@ -1,31 +1,21 @@
-import React, {
-  useState,
-  useEffect,
-  useContext,
-  useCallback,
-  useMemo,
-  useRef,
-} from "react";
+import React from "react";
 import MuiStyleFunction from "./StoresList.style";
-import {} from "./StoresList.logic";
 import { makeStyles } from "@material-ui/core";
 import { useGetDataByURL } from "../../hooks/useGetDataByURL";
 import { parseData } from "./StoresList.logic";
 import ItemRow from "../../components/ItemRow/ItemRow.jsx";
 const useStyles = makeStyles(MuiStyleFunction);
 
-const StoresList = ({}) => {
+const StoresList = () => {
   const classes = useStyles();
-
-  const { dataFromSlice, isItemsTab } = useGetDataByURL();
-
-  console.log(`dataFromSlice`, dataFromSlice);
+  const { dataFromSlice } = useGetDataByURL();
 
   const storesData = parseData(dataFromSlice);
   return (
     <div className={classes.storesList}>
+      <h1>Stores List</h1>
       {Object.keys(storesData).map((storeName) => (
-        <ItemRow>{`${storeName} : ${storesData[storeName]}`}</ItemRow>
+        <ItemRow key={storeName}>{`${storeName} : ${storesData[storeName]}`}</ItemRow>
       ))}
     </div>
   );

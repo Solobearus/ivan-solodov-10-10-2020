@@ -1,17 +1,9 @@
-import React, {
-  useState,
-  useEffect,
-  useContext,
-  useCallback,
-  useMemo,
-  useRef,
-} from "react";
+import React from "react";
 import MuiStyleFunction from "./ItemsListItemRow.style";
-import {} from "./ItemsListItemRow.logic";
 import { makeStyles } from "@material-ui/core";
 import { getDate } from "../../utils";
 import Button from "../Button/Button.jsx";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 
 const useStyles = makeStyles(MuiStyleFunction);
 
@@ -30,7 +22,7 @@ const ItemsListItemRow = ({ item, onClick, isShowRecievedButton }) => {
       <div className={classes.ItemsListRowItem__date}>{getDate(item.date)}</div>
       <div className={classes.ItemsListRowItem__store}>{item.store}</div>
       {isShowRecievedButton && (
-        <Button onClick={onClick} className={classes.itemRow__button}>
+        <Button onClick={onClick}>
           Recieved
         </Button>
       )}

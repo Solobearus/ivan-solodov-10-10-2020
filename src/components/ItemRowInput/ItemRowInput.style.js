@@ -10,7 +10,7 @@ export default (theme) => ({
         justifyContent: 'space-between',
         alignItems: 'center',
     },
-    ItemRowInput__button: {
-        margin: `0 0 0 ${theme.margin.default}`,
+    ItemRowInput__Input:{
+        width: '20%',
     }
 })

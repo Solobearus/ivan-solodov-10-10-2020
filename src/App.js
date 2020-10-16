@@ -1,16 +1,13 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect } from 'react';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Redirect,
-  Link,
-  useHistory
 } from "react-router-dom";
 import MuiStyleFunction from './App.style'
 import { makeStyles } from '@material-ui/core'
-
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { itemsSlice } from './store/slices'
 import Page from './pages/Page/Page.jsx'
 import useUpdateCurrency from './hooks/useUpdateCurrency'
@@ -28,7 +25,7 @@ function App() {
     const state = JSON.parse(localStorage.getItem("state"))
     if (state)
       dispatch(itemsSlice.actions.initState({ state }))
-  }, [])
+  }, [dispatch])
 
 
   return (

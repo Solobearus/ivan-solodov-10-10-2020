@@ -1,11 +1,4 @@
-import React, {
-  useState,
-  useEffect,
-  useContext,
-  useCallback,
-  useMemo,
-  useRef,
-} from "react";
+import React  from "react";
 import MuiStyleFunction from "./RecievedPage.style";
 import {} from "./RecievedPage.logic";
 import { makeStyles } from "@material-ui/core";
