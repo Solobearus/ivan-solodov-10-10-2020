@@ -27,10 +27,10 @@ function App() {
       dispatch(itemsSlice.actions.initState({ state }))
   }, [dispatch])
 
-
+ 
   return (
     <div className={classes.App}>
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <Switch>
           <Route exact path={"/"}>
             <Redirect

@@ -6,7 +6,7 @@ import { currencySlice, snackSlice } from "../store/slices";
 const fetchCurrency = async (dispatch) => {
     try {
         const result = await axios('https://api.exchangeratesapi.io/latest?base=USD&symbols=ILS');
-        console.log(`result`, result)
+      
         dispatch(currencySlice.actions.setUSDtoILS(result.data.rates.ILS))
     } catch (e) {
         dispatch(
