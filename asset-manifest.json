@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/static/js/main.8b58d5cf.chunk.js",
-    "main.js.map": "/static/js/main.8b58d5cf.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.46d7eefc.js",
-    "runtime-main.js.map": "/static/js/runtime-main.46d7eefc.js.map",
-    "static/js/2.ccadcf2d.chunk.js": "/static/js/2.ccadcf2d.chunk.js",
-    "static/js/2.ccadcf2d.chunk.js.map": "/static/js/2.ccadcf2d.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.fff3c3aaba39375c44808cb89746246a.js": "/precache-manifest.fff3c3aaba39375c44808cb89746246a.js",
-    "service-worker.js": "/service-worker.js",
-    "static/js/2.ccadcf2d.chunk.js.LICENSE.txt": "/static/js/2.ccadcf2d.chunk.js.LICENSE.txt"
+    "main.js": "/ivan-solodov-10-10-2020/static/js/main.8f1dff6f.chunk.js",
+    "main.js.map": "/ivan-solodov-10-10-2020/static/js/main.8f1dff6f.chunk.js.map",
+    "runtime-main.js": "/ivan-solodov-10-10-2020/static/js/runtime-main.07e5505a.js",
+    "runtime-main.js.map": "/ivan-solodov-10-10-2020/static/js/runtime-main.07e5505a.js.map",
+    "static/js/2.ccadcf2d.chunk.js": "/ivan-solodov-10-10-2020/static/js/2.ccadcf2d.chunk.js",
+    "static/js/2.ccadcf2d.chunk.js.map": "/ivan-solodov-10-10-2020/static/js/2.ccadcf2d.chunk.js.map",
+    "index.html": "/ivan-solodov-10-10-2020/index.html",
+    "precache-manifest.a310d1ec48ce90f4fe0e7cb90d1c2ac4.js": "/ivan-solodov-10-10-2020/precache-manifest.a310d1ec48ce90f4fe0e7cb90d1c2ac4.js",
+    "service-worker.js": "/ivan-solodov-10-10-2020/service-worker.js",
+    "static/js/2.ccadcf2d.chunk.js.LICENSE.txt": "/ivan-solodov-10-10-2020/static/js/2.ccadcf2d.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.46d7eefc.js",
+    "static/js/runtime-main.07e5505a.js",
     "static/js/2.ccadcf2d.chunk.js",
-    "static/js/main.8b58d5cf.chunk.js"
+    "static/js/main.8f1dff6f.chunk.js"
   ]
 }
