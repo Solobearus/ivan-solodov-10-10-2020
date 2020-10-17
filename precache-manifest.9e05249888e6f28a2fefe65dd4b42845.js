@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d0e310ebd97fa049aeceaff538f9e4ae",
+    "revision": "abdd5802b75d95353b02ed1e23e6fa84",
     "url": "/ivan-solodov-10-10-2020/index.html"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ivan-solodov-10-10-2020/static/js/2.ccadcf2d.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "7b9c63c346fade2339ac",
-    "url": "/ivan-solodov-10-10-2020/static/js/main.8f1dff6f.chunk.js"
+    "revision": "d9ac563dd60c44d1ec4d",
+    "url": "/ivan-solodov-10-10-2020/static/js/main.4166384c.chunk.js"
   },
   {
     "revision": "59967f1d57894d5478c6",

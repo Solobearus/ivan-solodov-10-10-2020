@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/ivan-solodov-10-10-2020/static/js/main.8f1dff6f.chunk.js",
-    "main.js.map": "/ivan-solodov-10-10-2020/static/js/main.8f1dff6f.chunk.js.map",
+    "main.js": "/ivan-solodov-10-10-2020/static/js/main.4166384c.chunk.js",
+    "main.js.map": "/ivan-solodov-10-10-2020/static/js/main.4166384c.chunk.js.map",
     "runtime-main.js": "/ivan-solodov-10-10-2020/static/js/runtime-main.07e5505a.js",
     "runtime-main.js.map": "/ivan-solodov-10-10-2020/static/js/runtime-main.07e5505a.js.map",
     "static/js/2.ccadcf2d.chunk.js": "/ivan-solodov-10-10-2020/static/js/2.ccadcf2d.chunk.js",
     "static/js/2.ccadcf2d.chunk.js.map": "/ivan-solodov-10-10-2020/static/js/2.ccadcf2d.chunk.js.map",
     "index.html": "/ivan-solodov-10-10-2020/index.html",
-    "precache-manifest.a310d1ec48ce90f4fe0e7cb90d1c2ac4.js": "/ivan-solodov-10-10-2020/precache-manifest.a310d1ec48ce90f4fe0e7cb90d1c2ac4.js",
+    "precache-manifest.9e05249888e6f28a2fefe65dd4b42845.js": "/ivan-solodov-10-10-2020/precache-manifest.9e05249888e6f28a2fefe65dd4b42845.js",
     "service-worker.js": "/ivan-solodov-10-10-2020/service-worker.js",
     "static/js/2.ccadcf2d.chunk.js.LICENSE.txt": "/ivan-solodov-10-10-2020/static/js/2.ccadcf2d.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.07e5505a.js",
     "static/js/2.ccadcf2d.chunk.js",
-    "static/js/main.8f1dff6f.chunk.js"
+    "static/js/main.4166384c.chunk.js"
   ]
 }
