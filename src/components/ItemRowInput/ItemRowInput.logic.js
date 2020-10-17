@@ -22,7 +22,7 @@ export const useItemRowInput = () => {
             dispatch(snackSlice.actions.openSnack({ message: "please enter a valid name. string with more than 2 letters expected" }));
             return false
         }
-        if (!price || isNaN(price)) {
+        if (!price || isNaN(price) || price <= 0) {
             dispatch(snackSlice.actions.openSnack({ message: "please enter a valid price. positive number is expected" }));
             return false
         }
