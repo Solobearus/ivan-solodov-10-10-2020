@@ -4,7 +4,7 @@ import { makeStyles } from "@material-ui/core";
 import Input from "../Input/Input.jsx";
 import { useSelector, useDispatch } from "react-redux";
 import Button from "../Button/Button.jsx";
-import { currencySlice } from "../../store/slices";
+import { currencySlice, snackSlice } from "../../store/slices";
 
 const useStyles = makeStyles(MuiStyleFunction);
 
@@ -16,13 +16,25 @@ const CurrencyIntervalInput = () => {
   const [interval, setInterval] = useState(intervalForCurrencyUpdate);
 
   useEffect(() => {
-    if (interval !== intervalForCurrencyUpdate)
-      setInterval(intervalForCurrencyUpdate);
-  }, [interval, intervalForCurrencyUpdate]);
+    setInterval(intervalForCurrencyUpdate);
+  }, [intervalForCurrencyUpdate]);
 
   const handleSubmit = () => {
-    if (interval > 1000)
+    if (interval >= 500) {
       dispatch(currencySlice.actions.setIntervalForCurrencyUpdate(interval));
+      dispatch(
+        snackSlice.actions.openSnack({
+          message: `succesfully updated the interval to ${interval}`,
+          severity: `success`,
+        })
+      );
+    } else {
+      dispatch(
+        snackSlice.actions.openSnack({
+          message: "iterval for currency fetch cannot be lower than 500ms",
+        })
+      );
+    }
   };
 
   return (

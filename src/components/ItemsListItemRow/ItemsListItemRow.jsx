@@ -27,15 +27,19 @@ const ItemsListItemRow = ({ item, onClick, isShowRecievedButton }) => {
 
       <div className={classes.ItemsListRowItem__data}>
         {xsMediaQuery ? (
-          <div
-            className={classes.ItemsListRowItem__data__label}
-          >
-            price
-          </div>
+          <div className={classes.ItemsListRowItem__data__label}>price</div>
         ) : null}
-        <div className={`${classes.ItemsListRowItem__price} ${classes.ItemsListRowItem__data__value}`}>
-          <div>{`שח`}</div>
-          <div>{`${(item.price * USDtoILS).toFixed(2)}`}</div>
+        <div
+          className={`${classes.ItemsListRowItem__price} ${classes.ItemsListRowItem__data__value}`}
+        >
+          {USDtoILS ? (
+            <>
+              <div>{`שח`}</div>
+              <div>{`${(item.price * USDtoILS).toFixed(2)}`}</div>
+            </>
+          ) : (
+            "loading ... "
+          )}
         </div>
       </div>
 

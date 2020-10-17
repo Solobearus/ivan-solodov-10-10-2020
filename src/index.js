@@ -12,15 +12,14 @@ import DateFnsUtils from '@date-io/date-fns';
 const theme = createMuiTheme(MuiTheme);
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Provider store={store}>
-      <MuiThemeProvider theme={theme}>
-        <MuiPickersUtilsProvider utils={DateFnsUtils}>
-          <App />
-        </MuiPickersUtilsProvider>
-      </MuiThemeProvider>
-    </Provider>
-  </React.StrictMode>,
+  <Provider store={store}>
+    <MuiThemeProvider theme={theme}>
+      <MuiPickersUtilsProvider utils={DateFnsUtils}>
+        <App />
+      </MuiPickersUtilsProvider>
+    </MuiThemeProvider>
+  </Provider>
+  , 
   document.getElementById('root')
 );
 

@@ -6,7 +6,7 @@ const INTERVAL_FOR_CURRENCY_UPDATE = 1000;
 export const currencySlice = createSlice({
   name: "currency",
   initialState: {
-    USDtoILS: 3.5,
+    USDtoILS: null,
     intervalForCurrencyUpdate: INTERVAL_FOR_CURRENCY_UPDATE,
   },
   reducers: {
@@ -20,10 +20,11 @@ export const snackSlice = createSlice({
   initialState: {
     open: false,
     message: '',
+    severity: 'error',
   },
   reducers: {
-    closeSnack: (state, action) => ({ open: false }),
-    openSnack: (state, action) => ({ open: true, message: action.payload.message, })
+    closeSnack: (state, action) => ({ ...state, open: false }),
+    openSnack: (state, action) => ({ open: true, message: action.payload.message, severity: action.payload.severity ? action.payload.severity : 'error', })
   }
 })
 

@@ -1,4 +1,4 @@
-import React  from "react";
+import React from "react";
 import MuiStyleFunction from "./SnackBar.style";
 import { makeStyles } from "@material-ui/core";
 import { useDispatch, useSelector } from "react-redux";
@@ -13,8 +13,8 @@ function Alert(props) {
   return <MuiAlert elevation={6} variant="filled" {...props} />;
 }
 
-const SnackBar = ({ severity = "error" }) => {
-  const { open, message } = useSelector((state) => state.snack);
+const SnackBar = () => {
+  const { open, message, severity = 'error' } = useSelector((state) => state.snack);
   const dispatch = useDispatch();
 
   const classes = useStyles();
@@ -34,10 +34,14 @@ const SnackBar = ({ severity = "error" }) => {
         horizontal: "center",
       }}
       open={open}
-      autoHideDuration={9999999999}
+      autoHideDuration={2000}
       onClose={handleClose}
     >
-      <Alert className={classes.SnackBar__Alert} onClose={handleClose} severity={severity}>
+      <Alert
+        className={classes.SnackBar__Alert}
+        onClose={handleClose}
+        severity={severity}
+      >
         {message}
       </Alert>
     </Snackbar>
