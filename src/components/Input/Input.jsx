@@ -1,6 +1,5 @@
 import React from "react";
 import MuiStyleFunction from "./Input.style";
-import {} from "./Input.logic";
 import { makeStyles, TextField, InputAdornment } from "@material-ui/core";
 
 const useStyles = makeStyles(MuiStyleFunction);

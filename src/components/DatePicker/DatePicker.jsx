@@ -1,6 +1,5 @@
 import React from "react";
 import MuiStyleFunction from "./DatePicker.style";
-import {} from "./DatePicker.logic";
 import { makeStyles } from "@material-ui/core";
 import { KeyboardDatePicker } from "@material-ui/pickers";
 

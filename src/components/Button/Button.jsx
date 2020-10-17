@@ -1,6 +1,5 @@
 import React from "react";
 import MuiStyleFunction from "./Button.style";
-import {} from "./Button.logic";
 import { makeStyles } from "@material-ui/core";
 import MUIButton from "@material-ui/core/Button";
 
