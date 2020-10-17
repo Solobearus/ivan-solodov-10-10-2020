@@ -1,29 +1,4 @@
-const colors1 = {
-  /* base color */
-  base: {
-    default: `#eee`,
-    light: `#fff`,
-    dark: `#999`,
-  },
-  /* primary brand color */
-  primary: {
-    default: `#6610f2`,
-    light: `#8540f5`,
-    dark: `#510bc4`,
-  },
-  /* secondary brand color */
-  secondary: {
-    default: `#dc3545`,
-    light: `#e4606d`,
-    dark: `#bd2130`,
-  },
-  font: {
-    default: `#333`,
-    invert: `#eee`,
-  },
-};
-
-const colors2 = {
+const colors = {
   /* base color */
   base: {
     default: `#eee`,
@@ -51,10 +26,10 @@ const colors2 = {
 export default {
   palette: {
     primary: {
-      main: colors1.primary.default,
+      main: colors.primary.default,
     },
     secondary: {
-      main: colors1.primary.default,
+      main: colors.primary.default,
     },
   },
 
@@ -70,7 +45,7 @@ export default {
 
   // use this one
   colors: {
-    default: colors1
+    default: colors
   },
   fontSizes: {
     h1: `36px`,
@@ -90,7 +65,7 @@ export default {
     default: `10px`,
   },
   border: {
-    default: `1px solid ${colors1.primary.default}`,
+    default: `1px solid ${colors.primary.default}`,
   },
   borderRadius: {
     default: `10px`,
