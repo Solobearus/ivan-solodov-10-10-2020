@@ -6,15 +6,15 @@ export const useGetDataByURL = () => {
 
     let history = useHistory();
 
-    const isItemsTab = history.location.pathname === "/list"
+    const isItemsURL = history.location.pathname === "/list"
 
     // TODO: improve
     const sliceToTakeData =
-        isItemsTab ? "items" : "recievedItems";
+        isItemsURL ? "items" : "recievedItems";
 
     const { [sliceToTakeData]: dataFromSlice } = useSelector(
         (state) => state.items
     );
 
-    return { isItemsTab, dataFromSlice };
+    return { isItemsURL, dataFromSlice };
 }

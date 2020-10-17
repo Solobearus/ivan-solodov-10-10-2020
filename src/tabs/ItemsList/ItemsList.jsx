@@ -8,31 +8,39 @@ import { useGetDataByURL } from "../../hooks/useGetDataByURL";
 import ItemsListItemRow from "../../components/ItemsListItemRow/ItemsListItemRow.jsx";
 import { useDispatch } from "react-redux";
 import ItemsListHeader from "../../components/ItemsListHeader/ItemsListHeader.jsx";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
+import { useTheme } from '@material-ui/core/styles';
+
 const useStyles = makeStyles(MuiStyleFunction);
 
 const ItemsList = () => {
   const classes = useStyles();
-
-  const { dataFromSlice, isItemsTab } = useGetDataByURL();
+  const theme = useTheme();
   const dispatch = useDispatch();
+
+  const { dataFromSlice, isItemsURL } = useGetDataByURL();
+
+  const matches = useMediaQuery(theme.breakpoints.down("xs"));
 
   return (
     <div className={classes.itemsList}>
-      <h1>{!isItemsTab ? "Recieved " : ""}Items List</h1>
-      <ItemRow>
-        <ItemsListHeader isShowRecievedButton={isItemsTab} />
-      </ItemRow>
+      <h1>{!isItemsURL ? "Recieved " : ""}Items List</h1>
+      {!matches ? (
+        <ItemRow>
+          <ItemsListHeader isShowRecievedButton={isItemsURL} />
+        </ItemRow>
+      ) : null}
       {dataFromSlice &&
         Object.keys(dataFromSlice).map((key) => (
           <ItemRow key={key}>
             <ItemsListItemRow
               item={dataFromSlice[key]}
               onClick={() => onClick(dispatch, dataFromSlice[key])}
-              isShowRecievedButton={isItemsTab}
+              isShowRecievedButton={isItemsURL}
             />
           </ItemRow>
         ))}
-      {isItemsTab && <ItemRowInput />}
+      {isItemsURL && <ItemRowInput />}
     </div>
   );
 };

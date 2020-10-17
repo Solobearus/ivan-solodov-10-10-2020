@@ -1,13 +1,5 @@
-import React, {
-  useState,
-  useEffect,
-  useContext,
-  useCallback,
-  useMemo,
-  useRef,
-} from "react";
+import React, { useState, useEffect } from "react";
 import MuiStyleFunction from "./CurrencyIntervalInput.style";
-import {} from "./CurrencyIntervalInput.logic";
 import { makeStyles } from "@material-ui/core";
 import Input from "../Input/Input.jsx";
 import { useSelector, useDispatch } from "react-redux";
@@ -16,7 +8,7 @@ import { currencySlice } from "../../store/slices";
 
 const useStyles = makeStyles(MuiStyleFunction);
 
-const CurrencyIntervalInput = ({}) => {
+const CurrencyIntervalInput = () => {
   const { intervalForCurrencyUpdate } = useSelector((state) => state.currency);
   const dispatch = useDispatch();
 
@@ -26,7 +18,7 @@ const CurrencyIntervalInput = ({}) => {
   useEffect(() => {
     if (interval !== intervalForCurrencyUpdate)
       setInterval(intervalForCurrencyUpdate);
-  }, [intervalForCurrencyUpdate]);
+  }, [interval, intervalForCurrencyUpdate]);
 
   const handleSubmit = () => {
     if (interval > 1000)
