@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/ivan-solodov-10-10-2020/precache-manifest.c2be138e2ddd0457bb8c9c89b70756a8.js"
+  "/ivan-solodov-10-10-2020/precache-manifest.b2616b3e6f0c0028fdcc2c5ab22f4802.js"
 );
 
 self.addEventListener('message', (event) => {
