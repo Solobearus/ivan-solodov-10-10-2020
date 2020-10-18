@@ -20,14 +20,14 @@ const ItemsListItemRow = ({ item, onClick, isShowRecievedButton }) => {
     <>
       <div className={classes.ItemsListRowItem__data}>
         {xsMediaQuery ? (
-          <div className={classes.ItemsListRowItem__data__label}>name</div>
+          <div className={classes.ItemsListRowItem__data__label}>Name</div>
         ) : null}
         <div className={classes.ItemsListRowItem__data__value}>{item.name}</div>
       </div>
 
       <div className={classes.ItemsListRowItem__data}>
         {xsMediaQuery ? (
-          <div className={classes.ItemsListRowItem__data__label}>price</div>
+          <div className={classes.ItemsListRowItem__data__label}>Price</div>
         ) : null}
         <div
           className={`${classes.ItemsListRowItem__price} ${classes.ItemsListRowItem__data__value}`}
@@ -45,7 +45,7 @@ const ItemsListItemRow = ({ item, onClick, isShowRecievedButton }) => {
 
       <div className={classes.ItemsListRowItem__data}>
         {xsMediaQuery ? (
-          <div className={classes.ItemsListRowItem__data__label}>date</div>
+          <div className={classes.ItemsListRowItem__data__label}>Delivary Est. Date</div>
         ) : null}
         <div className={classes.ItemsListRowItem__data__value}>
           {getDate(item.date)}
@@ -54,7 +54,7 @@ const ItemsListItemRow = ({ item, onClick, isShowRecievedButton }) => {
 
       <div className={classes.ItemsListRowItem__data}>
         {xsMediaQuery ? (
-          <div className={classes.ItemsListRowItem__data__label}>store</div>
+          <div className={classes.ItemsListRowItem__data__label}>Store</div>
         ) : null}
         <div className={classes.ItemsListRowItem__data__value}>
           {item.store}

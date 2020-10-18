@@ -9,26 +9,10 @@ const ItemsListHeader = ({ isShowRecievedButton }) => {
 
   return (
     <>
-      <div
-        className={classes.ItemsListHeader__data}
-      >
-        name
-      </div>
-      <div
-        className={classes.ItemsListHeader__data}
-      >
-        price
-      </div>
-      <div
-        className={classes.ItemsListHeader__data}
-      >
-        date
-      </div>
-      <div
-        className={classes.ItemsListHeader__data}
-      >
-        store
-      </div>
+      <div className={classes.ItemsListHeader__data}>Name</div>
+      <div className={classes.ItemsListHeader__data}>Price</div>
+      <div className={classes.ItemsListHeader__data}>Delivary Est. Date</div>
+      <div className={classes.ItemsListHeader__data}>Store</div>
       {isShowRecievedButton && (
         <div className={classes.ItemsListHeader__spaceForButton}></div>
       )}

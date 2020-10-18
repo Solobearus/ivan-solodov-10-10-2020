@@ -31,13 +31,13 @@ const ItemRowInput = () => {
       <h2>Add an item:</h2>
       <ItemRow className={classes.ItemRowInput}>
         <Input
-          label={"name"}
+          label={"Name"}
           className={`${classes.ItemRowInput__name} ${classes.ItemRowInput__Input}`}
           onChange={(e) => setName(e.target.value)}
           value={name}
         ></Input>
         <Input
-          label={"price"}
+          label={"Price"}
           type="number"
           adornment="$"
           className={`${classes.ItemRowInput__price} ${classes.ItemRowInput__Input}`}
@@ -45,13 +45,13 @@ const ItemRowInput = () => {
           value={price}
         ></Input>
         <DatePicker
-          label={"date"}
+          label={"Delivary Est. Date"}
           className={`${classes.ItemRowInput__date} ${classes.ItemRowInput__Input}`}
           onChange={(value) => setDate(value)}
           value={date}
         ></DatePicker>
         <Select
-          label={"store"}
+          label={"Store"}
           className={`${classes.ItemRowInput__store} ${classes.ItemRowInput__Input}`}
           onChange={(e) => setStore(e.target.value)}
           value={store}

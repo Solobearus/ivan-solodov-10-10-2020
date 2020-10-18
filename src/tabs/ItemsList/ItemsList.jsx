@@ -31,7 +31,7 @@ const ItemsList = () => {
         </ItemRow>
       ) : null}
       {dataFromSlice &&
-        Object.keys(dataFromSlice).map((key) => (
+        Object.keys(dataFromSlice).sort((a, b) => dataFromSlice[a].date - dataFromSlice[b].date).map((key) => (
           <ItemRow key={key}>
             <ItemsListItemRow
               item={dataFromSlice[key]}

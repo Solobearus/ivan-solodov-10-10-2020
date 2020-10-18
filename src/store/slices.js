@@ -43,6 +43,10 @@ export const itemsSlice = createSlice({
   reducers: {
     initState: (state, action) => action.payload.state,
     addItem: (state, action) => {
+
+      // const items = 
+      // const orderedItems = Object.keys(items).sort((a, b) => items[a].date < items[b].date);
+
       const newState = {
         ...state,
         items: { ...state.items, [state.currentUniqueId]: { ...action.payload, id: state.currentUniqueId } },
